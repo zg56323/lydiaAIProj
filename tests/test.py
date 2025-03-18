@@ -1,7 +1,7 @@
 from utils.call_workflow import call_workflow_with_input
 import streamlit as st
 # 模拟用户输入
-user_input = "波动光学多少知识点"
+user_input = "波动光学多少知识点-医生"
 response_mode =  "blocking"
 st.session_state['user'] = "gavin"
 # 测试 call_workflow_with_input 方法
