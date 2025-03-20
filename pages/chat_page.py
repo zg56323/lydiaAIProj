@@ -9,18 +9,28 @@ def chat_page():
     components.html(
         """
         <style>
-            body {margin: 20; padding: 10}
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+            }
             iframe {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 90vw !important;
-                height: 90vh !important;
-                z-index: 9999;
+                width: 100%;
+                height: 100vh;
+                border: none;
+                margin: 0;
+                padding: 0;
+            }
+            /* 媒体查询以适应小屏幕 */
+            @media (max-width: 600px) {
+                iframe {
+                    width: 100%;
+                    height: 100vh;
+                }
             }
         </style>
         <iframe
-            src="http://localhost/chatbot/x3ZGy60jU9Ve34vo"
+            src="http://192.168.2.10/chatbot/x3ZGy60jU9Ve34vo"
             frameborder="0"
             allow="microphone">
         </iframe>
@@ -28,4 +38,3 @@ def chat_page():
         height=680,
         scrolling=True
     )
-
