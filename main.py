@@ -24,11 +24,15 @@ st.markdown(
         .stContainer {
             padding: 20px; /* 增加容器的内边距 */
         }
+        /* 添加标题样式 */
+        .css-16nzq9e {
+            margin-top: -60px; /* 将标题上移 */
+            font-size: 20px; /* 调整字体大小 */
+        }
     </style>
     """,
     unsafe_allow_html=True,
 )
-
 
 def display_pages():
     """根据当前页面显示相应的内容"""
@@ -62,7 +66,7 @@ def main():
             st.session_state.current_page = "知识讲解"
 
         # 创建顶部导航栏
-        st.title("24小时智能学伴")
+        st.markdown('<h1 class="css-16nzq9e">24小时智能学伴</h1>', unsafe_allow_html=True)
 
         # 使用 st.container 来包裹内容，并增加内边距
         with st.container():

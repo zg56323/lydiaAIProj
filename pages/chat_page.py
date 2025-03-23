@@ -1,8 +1,5 @@
-import streamlit as st
 import streamlit.components.v1 as components
 
-# 设置页面配置
-st.set_page_config(layout="wide")
 
 def chat_page():
 

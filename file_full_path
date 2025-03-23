@@ -1,8 +1,3 @@
-import streamlit as st
-
-from utils.call_workflow import call_workflow_with_input
-
-# 查询论文页面
 def query_paper_page():
     message = st.text_input("请输入你想查询的论文")
     if st.button("提交"):  # 添加提交按钮

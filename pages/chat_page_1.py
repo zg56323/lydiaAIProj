@@ -1,4 +1,6 @@
 import streamlit as st
+
+from config.config import API_KEY
 from utils.call_workflow import call_workflow_with_input
 
 
@@ -28,7 +30,7 @@ def chat_page_1():
                     placeholder = st.empty()
                     placeholder.markdown("⏳ 正在思考中...")
                     try:
-                        result = call_workflow_with_input(st.session_state.messages[i-1]["content"])
+                        result = call_workflow_with_input(st.session_state.messages[i-1]["content"], API_KEY)
                         placeholder.markdown(result)
                         message["content"] = result  # 更新消息内容
                     except Exception as e:
