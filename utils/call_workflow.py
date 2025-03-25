@@ -15,7 +15,7 @@ def call_workflow_with_input(user_input, api_key, response_mode="blocking"):
       - streaming 模式返回事件生成器
     """
     # 公共请求参数配置
-    url = "http://localhost/v1/workflows/run"
+    url = "http://192.168.2.10/v1/workflows/run"
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json"
