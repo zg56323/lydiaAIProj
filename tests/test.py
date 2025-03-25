@@ -3,8 +3,8 @@ from mindMap.markmap import upload_markdown
 from pages.query_paper_page import query_paper_page
 from utils.call_workflow import call_workflow_with_input
 
-# 模拟用户输入
 user_input = "波动光学"
+
 response_mode =  "blocking"
 st.session_state['user'] = "gavin"
 apikey = "app-uFK7vFs0DvH7bzN1AMGj0OUB"
