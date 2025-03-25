@@ -2,13 +2,12 @@ import json
 import requests
 import streamlit as st
 
-from config.config import API_KEY
 
-
-def call_workflow_with_input(user_input, response_mode="blocking"):
+def call_workflow_with_input(user_input, api_key, response_mode="blocking"):
     """
     根据用户输入生成请求参数并发送 POST 请求
 
+    :param api_key:
     :param user_input: 用户输入的消息
     :param response_mode: 响应模式 (streaming/blocking)
     :return:
@@ -16,9 +15,9 @@ def call_workflow_with_input(user_input, response_mode="blocking"):
       - streaming 模式返回事件生成器
     """
     # 公共请求参数配置
-    url = "http://localhost/v1/workflows/run"
+    url = "http://192.168.2.10/v1/workflows/run"
     headers = {
-        "Authorization": f"Bearer {API_KEY}",
+        "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json"
     }
     payload = {

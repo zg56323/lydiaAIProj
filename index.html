@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24小时智能学伴</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .button {
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="header">
+            <h1>24小时智能学伴</h1>
+        </div>
+        <button class="button">💡 知识讲解</button>
+        <button class="button">📄 查询论文</button>
+        <button class="button">📊 思维导图</button>
+        <button class="button">📝 答疑/留言</button>
+        <button class="button">✍️ 自测题目</button>
+        <button class="button">📚 学习建议</button>
+        <button class="button">🌟 思政案例</button>
+    </div>
+    <div class="content">
+        <textarea placeholder="请输入你的问题或留言"></textarea>
+        <button>提交</button>
+    </div>
+</body>
+</html>
